@@ -1,0 +1,33 @@
+body{
+    color: black;
+    margin:0;
+}
+
+p{
+    color:purple;
+    font-size: 16px;
+}
+
+/* We must give our container a width and height for clientWidth and clientHeight to work in sketch.js */
+/* Understanding how sizing of elements works: https://www.w3schools.com/css/css_boxmodel.asp */
+#sketch-container{
+    position:fixed;   /*position fixed means it will be stuck to the window frame: https://www.w3schools.com/css/css_positioning.asp*/
+    width:100%;   /*100% of the window width */
+    height:100%;
+    top:0;  /*if used with position fixed it sticks it to the top  */
+    left:0;  /*if used with position fixed it sticks it to the left  */
+}
+
+#html-content{
+    position:relative;
+    padding:3%;
+}
+
+/* Example of a simple media query to make something responsive for mobile */
+@media only screen and (max-width: 720px) {
+    #sketch-container{
+        position:relative;   /*position relative means it will be in the normal flow of content on the page: https://www.w3schools.com/css/css_positioning.asp */
+        width:100%;   /*100% of the parent container*/
+        height:300px; 
+    }
+}
